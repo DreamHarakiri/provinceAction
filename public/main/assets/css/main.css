@@ -1,0 +1,309 @@
+body {
+  background-color: #12181f;
+  animation: loading 3s 0s forwards;
+  opacity: 0;
+}
+/* navgivation*/
+.navigation {
+  height: 100vh;
+  max-width: 65px;
+  width: 100%;
+  background-color: #161d26;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+
+  font-size: 20px;
+
+  position: fixed;
+  align-items: center;
+}
+
+.logotip {
+  width: 34px;
+  height: 30px;
+  fill: #12be73;
+}
+
+.navigation ul {
+  margin-block-start: 60px;
+  text-align: center;
+}
+
+.navigation ul li {
+  margin-block-start: 50px;
+}
+
+.exitBtn {
+  position: absolute;
+  bottom: 30px;
+}
+
+.activeTab {
+  color: #12be73;
+}
+/* body */
+/* поиск акций, профиль и уведомления*/
+.menuController {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 20px;
+}
+
+.searchAction {
+  width: 300px;
+  height: 45px;
+  border-radius: 16px;
+  background-color: #161d26;
+  color: white;
+  border: none;
+  padding-left: 26px;
+  font-size: 14px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.searchAction:focus-visible {
+  outline: #12be73 2px solid;
+}
+
+.searchAction::placeholder {
+  color: #92929d;
+}
+
+.bi-bell {
+  font-size: 20px;
+}
+
+.bellLink {
+  width: 45px;
+  height: 45px;
+  background-color: #161d26;
+  border-radius: 16px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  background-color: #161d26;
+  background-image: url("https://www.smartworld.it/images/2022/01/25/recensione-gigabyte-eagle-8g-rtx-3050-nvidia-18-di-18--orig.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+}
+/**/
+.main-content {
+  margin-inline-start: 65px;
+  padding: 20px 50px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.main-content h1 {
+  font-size: 24px;
+}
+
+.main-content p {
+  font-size: 14px;
+  color: rgb(182, 182, 182);
+}
+
+.actionsTop {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #161d26;
+  animation: upContent 0.5s 0s forwards linear;
+  margin-block-start: 150vh;
+  padding: 10px;
+  margin-block-end: 20px;
+}
+
+.actionsTop ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  position: relative;
+}
+
+.actionsTop ul li:first-child {
+  margin-inline-end: 100px;
+  margin-inline-start: 60px;
+}
+
+.company {
+  margin-inline-start: 30px;
+}
+
+.dynamic {
+  position: absolute;
+  right: 115px;
+}
+
+.defaultTab li {
+  font-weight: bold;
+  padding-block-start: 10px;
+  padding-block-end: 20px;
+}
+
+html::-webkit-scrollbar {
+  inline-size: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #24303e;
+}
+
+.price {
+  position: absolute;
+  right: 20px;
+}
+
+.list__content {
+  font-size: 14px;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.list__content:hover {
+  background-color: #24303e;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.logo__content {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.defaultTab {
+  border-bottom: 1px solid rgba(36, 45, 57, 0.6);
+}
+
+.list__content li {
+  margin-block-start: 15px;
+  margin-block-end: 15px;
+}
+
+.list__content:not(:first-child) {
+  margin-block-start: 10px;
+}
+
+@keyframes loading {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes upContent {
+  from {
+    margin-block-start: 150vh;
+  }
+  to {
+    margin-block-start: 50px;
+  }
+}
+
+.name__content {
+  color: white;
+  min-width: 120px;
+  margin-inline-start: 30px;
+}
+
+.company__content {
+  color: #818181;
+  margin-inline-start: 90px;
+}
+
+.dynamic__content {
+  padding: 10px;
+  background-color: #1f2f2f;
+  color: #2ecf95;
+  border-radius: 12px;
+
+  position: absolute;
+  bottom: -10px;
+}
+
+@media (max-width: 768px) {
+  .actionsTop ul {
+    position: static;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .dynamic {
+    position: static;
+  }
+
+  .price {
+    position: static;
+  }
+  .company__content {
+    margin-inline-start: 0;
+  }
+
+  .actionsTop ul li:first-child {
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+  }
+
+  .list__content {
+    justify-content: space-between;
+    position: static;
+  }
+
+  .logo__content {
+    display: none;
+  }
+
+  .name__content {
+    margin-inline-start: 10px;
+  }
+
+  .main-content h1 {
+    font-size: 24px;
+    margin-block-start: 20px;
+    margin-inline-start: 10px;
+  }
+
+  .main-content p {
+    font-size: 14px;
+    color: rgb(182, 182, 182);
+    margin-inline-start: 10px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .main-content {
+    margin-inline-start: 0;
+    padding: 0;
+  }
+}

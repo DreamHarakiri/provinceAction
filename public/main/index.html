@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/logotip.ico" type="image/svg+xml" />
+
+    <title>ProvinceActions</title>
+
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="navigation">
+        <nav>
+          <svg class="logotip" viewBox="0 0 28 24">
+            <use href="./assets/images/logotip.svg#logotip"></use>
+          </svg>
+          <ul>
+            <li>
+              <a href="#"><i class="bi bi-house"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-graph-up"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-archive"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-gear"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-chat-right-text"></i></a>
+            </li>
+          </ul>
+          <a class="exitBtn" href="#"><i class="bi bi-box-arrow-left"></i></a>
+        </nav>
+      </section>
+      <section class="main-content">
+        <div class="headerMain">
+          <div>
+            <h1>Добрый вечер, DreamHarakiri</h1>
+            <p>Давай посмотрим что нового на провинциальном рынке</p>
+          </div>
+          <div class="menuController">
+            <form action="">
+              <input
+                class="searchAction"
+                type="search"
+                name=""
+                id=""
+                placeholder="Поиск акций"
+              />
+            </form>
+
+            <a href="#" class="bellLink"><i class="bi bi-bell"></i></a>
+
+            <a href="#">
+              <div class="avatar"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="actionsTop">
+          <ul class="defaultTab">
+            <li class="name">Название</li>
+            <li class="company">Компания</li>
+            <li class="dynamic">Динамика</li>
+            <li class="price">Цена</li>
+          </ul>
+
+          <template id="templateAction">
+            <ul class="list__content">
+              <img class="logo__content" src="" alt="" />
+              <li class="name__content"></li>
+              <li class="company__content"></li>
+              <li class="dynamic dynamic__content"></li>
+              <li class="price price__content"></li>
+            </ul>
+          </template>
+        </div>
+        <p>Загрузить все акции</p>
+      </section>
+    </main>
+
+    <script src="./assets/script/Action.js"></script>
+    <script src="./assets/script/loaderAction.js"></script>
+  </body>
+</html>
