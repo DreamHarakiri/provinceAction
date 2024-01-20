@@ -12,7 +12,7 @@ const sendApi = (e) => {
   const email__input = document.querySelector(".email").value;
   const password__input = document.querySelector(".password").value;
 
-  return fetch("http://localhost:5000/checkData/", {
+  return fetch("https://zgpcgck3-5000.uks1.devtunnels.ms/checkData/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
