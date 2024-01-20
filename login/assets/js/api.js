@@ -39,12 +39,17 @@ const sendApi = (e) => {
 
 function errorMessage() {
   const container__error = document.querySelector(".errorContainer");
+  let timerError;
+  if (container__error.classList.contains("errorContainer__hide")) {
+    console.log("При нажатии кнопки: ");
+    container__error.classList.remove("errorContainer__hide");
+    console.log("При появлении уведомления: ");
 
-  container__error.classList.remove("errorContainer__hide");
-  const timerError = setInterval(() => {
-    container__error.classList.add("errorContainer__hide");
-    clearInterval(timerError);
-  }, 11500);
+    timerError = setInterval(() => {
+      container__error.classList.add("errorContainer__hide");
+      clearInterval(timerError);
+    }, 11500);
+  }
 }
 
 /*const checkdata = () => {
