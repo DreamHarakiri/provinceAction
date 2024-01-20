@@ -1,0 +1,280 @@
+body {
+  background-color: #111112;
+  position: relative;
+
+  animation: loading 1.5s 0s forwards;
+  opacity: 0;
+}
+
+html {
+  overflow-y: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.picture {
+  width: 527px;
+  height: 100vh;
+  background-image: url(../image/picture.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form__login-section {
+  padding: 0px 150px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.form__login-section h1 {
+  color: #fff;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.form__login-section p {
+  color: #7f7f7f;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  max-width: 625px;
+
+  margin-block-start: 10px;
+}
+
+.description__form span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form__login-section form {
+  margin-block-start: 60px;
+}
+
+form input {
+  width: 100%;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #3d3d3d;
+  background: #242424;
+
+  padding-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: white;
+}
+
+form input:last-of-type {
+  margin-block-start: 33px;
+}
+
+form input:focus-visible {
+  outline: #4b72c2 1px solid;
+}
+
+form button {
+  border-radius: 4px;
+  background: #4b72c2;
+  width: 200px;
+  height: 48px;
+
+  border: none;
+  cursor: pointer;
+
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  margin-block-start: 60px;
+}
+
+form button:hover {
+  background-color: #4e83ee;
+}
+
+form button:focus-visible,
+form button:focus {
+  background-color: #4265ab;
+}
+
+.auth_content span {
+  color: #4b72c2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  margin-block-start: 100px;
+}
+
+.line__footer {
+  width: 100%;
+  height: 2px;
+  background-color: #3d3d3d;
+}
+
+@keyframes loading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.errorContainer__hide {
+  display: none;
+}
+
+.errorContainer {
+  position: absolute;
+  width: 343px;
+  border-radius: 8px;
+  background-image: url("../image/error.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2),
+    0px 6px 30px 0px rgba(0, 0, 0, 0.12), 0px 16px 24px 0px rgba(0, 0, 0, 0.14);
+  right: 20px;
+  bottom: 20px;
+
+  animation: showError 0.5s 0s linear, hideError 0.5s 11s linear;
+}
+
+.flexContainer__error {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 12px 16px;
+}
+
+.error__textSetting {
+  padding: 12px 16px;
+}
+
+.error__textSetting h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 129.412% */
+  letter-spacing: -0.408px;
+  text-align: left;
+  color: white;
+}
+
+.error__textSetting p {
+  color: #c8c5c5;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 138.462% */
+  letter-spacing: -0.078px;
+}
+
+.error__cancelImage {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 43px;
+  background: #303746;
+  padding: 8px;
+}
+
+.errorLoader__container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.errorLoader {
+  background-color: #f04349;
+  height: 100%;
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  animation: timerError 10s 1s linear;
+}
+
+@keyframes showError {
+  from {
+    bottom: -50px;
+  }
+  to {
+    bottom: 20px;
+  }
+}
+
+@keyframes timerError {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 1%;
+  }
+}
+
+@keyframes hideError {
+  from {
+    bottom: 20px;
+  }
+  to {
+    bottom: -200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .picture {
+    display: none;
+  }
+
+  main {
+    height: 100vh;
+  }
+
+  .form__login-section {
+    padding: 0px 30px;
+  }
+
+  .form__login-section {
+    margin: auto;
+    display: flex;
+    align-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .form__login-section h1 {
+    font-size: 24px;
+  }
+
+  .form__login-section p {
+    font-size: 18px;
+  }
+}

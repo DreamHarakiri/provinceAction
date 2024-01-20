@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Province Actions</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+  </head>
+  <body>
+    <main>
+      <section class="picture"></section>
+      <section class="form__login-section">
+        <h1>Вход в аккаунт</h1>
+        <p class="description__form">
+          Используйте данные для входа в аккаунт, при возникновении проблем
+          обратитесь в <span>техническую</span> поддержку сайта
+        </p>
+
+        <form class="form__login">
+          <input type="email" class="email" placeholder="Email" />
+          <input type="password" class="password" placeholder="Password" />
+          <button class="form__btn">Вход</button>
+        </form>
+
+        <footer>
+          <div class="line__footer"></div>
+
+          <p class="auth_content">
+            Нет аккаунта? Предлагаем его <span>зарегистрировать</span>
+          </p>
+        </footer>
+      </section>
+    </main>
+
+    <div class="errorContainer errorContainer__hide">
+      <div class="flexContainer__error">
+        <div>
+          <svg
+            class="error__cancelImage"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+          >
+            <use href="./assets/image/cancel.svg#cancel"></use>
+          </svg>
+        </div>
+        <div class="error__textSetting">
+          <h1>Аккаунт не был найден</h1>
+          <p>
+            Пожалуйста, введите верные данные. Если возникли проблемы со входом,
+            обратитесь в поддержку
+          </p>
+        </div>
+      </div>
+      <div class="errorLoader__container">
+        <div class="errorLoader"></div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./assets/js/api.js"></script>
+</html>
