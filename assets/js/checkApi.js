@@ -1,14 +1,13 @@
+import { urlApi } from "./config.js";
+
 const animationPage = document.querySelector(".loader");
 
 const checkAccounts = () => {
-  console.log(localStorage.getItem("AccountData"));
   if (localStorage.getItem("AccountData")) {
-    console.log("test");
-
     let localDataJSON = localStorage.getItem("AccountData");
     let localData = JSON.parse(localDataJSON);
-    console.log("test");
-    return fetch("https://zgpcgck3-5000.uks1.devtunnels.ms/checkData/", {
+
+    return fetch(urlApi, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,11 +38,13 @@ const checkAccounts = () => {
 const animationEnd = (e) => {
   let dataAccount = e;
   animationPage.addEventListener("animationend", () => {
-    if (dataAccount) {
-      window.location.href = "./main";
-    } else {
-      window.location.href = "./login";
-    }
+    setInterval(() => {
+      if (dataAccount) {
+        window.location.href = "./actions";
+      } else {
+        window.location.href = "./login";
+      }
+    }, 1000);
   });
 };
 

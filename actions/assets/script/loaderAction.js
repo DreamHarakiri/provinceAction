@@ -1,3 +1,5 @@
+import { test } from "./test.js";
+
 const NameCompany = document.querySelector(".name__content");
 const companyContent = document.querySelector(".company__content");
 const dynamicContent = document.querySelector(".dynamic__content");

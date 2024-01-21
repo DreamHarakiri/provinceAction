@@ -1,3 +1,5 @@
+import { urlApi } from "../../../assets/js/config.js";
+
 const form__btn = document.querySelector(".form__btn");
 const form__login = document.querySelector(".form__login");
 
@@ -11,7 +13,7 @@ const sendApi = (e) => {
 
   const email__input = document.querySelector(".email").value;
   const password__input = document.querySelector(".password").value;
-  return fetch("https://zgpcgck3-5000.uks1.devtunnels.ms/checkData/", {
+  return fetch(urlApi, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -30,7 +32,7 @@ const sendApi = (e) => {
       } else if (data !== false) {
         localStorage.removeItem("AccountData");
         localStorage.setItem("AccountData", JSON.stringify(data));
-        window.location.href = "../main";
+        window.location.href = "../actions";
       }
     })
     .catch((error) => {
@@ -43,7 +45,7 @@ const checkAccount = () => {
 
   if (localAccount) {
     let localAccountJSON = JSON.parse(localAccount);
-    return fetch("https://zgpcgck3-5000.uks1.devtunnels.ms/checkData/", {
+    return fetch(urlApi, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +60,7 @@ const checkAccount = () => {
       })
       .then((data) => {
         if (data) {
-          window.location.href = "../main";
+          window.location.href = "../actions";
         }
       })
       .catch((error) => {
