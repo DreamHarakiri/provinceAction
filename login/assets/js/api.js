@@ -11,7 +11,6 @@ const sendApi = (e) => {
 
   const email__input = document.querySelector(".email").value;
   const password__input = document.querySelector(".password").value;
-
   return fetch("https://zgpcgck3-5000.uks1.devtunnels.ms/checkData/", {
     method: "POST",
     headers: {
@@ -29,7 +28,9 @@ const sendApi = (e) => {
       if (data === false) {
         errorMessage();
       } else if (data !== false) {
+        localStorage.removeItem("AccountData");
         localStorage.setItem("AccountData", JSON.stringify(data));
+        window.location.href = "../main";
       }
     })
     .catch((error) => {
@@ -37,13 +38,42 @@ const sendApi = (e) => {
     });
 };
 
+const checkAccount = () => {
+  let localAccount = localStorage.getItem("AccountData");
+
+  if (localAccount) {
+    let localAccountJSON = JSON.parse(localAccount);
+    return fetch("https://zgpcgck3-5000.uks1.devtunnels.ms/checkData/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: localAccountJSON.email,
+        password: localAccountJSON.password,
+      }),
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+      })
+      .then((data) => {
+        if (data) {
+          window.location.href = "../main";
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+};
+
+checkAccount();
+
 function errorMessage() {
   const container__error = document.querySelector(".errorContainer");
   let timerError;
   if (container__error.classList.contains("errorContainer__hide")) {
-    console.log("При нажатии кнопки: ");
     container__error.classList.remove("errorContainer__hide");
-    console.log("При появлении уведомления: ");
 
     timerError = setInterval(() => {
       container__error.classList.add("errorContainer__hide");
