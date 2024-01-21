@@ -23,24 +23,21 @@ const checkAccounts = () => {
       })
       .then((data) => {
         if (data === false) {
-          //window.location.href = "./login";
           animationEnd(false);
-        } else if (data !== false) {
+        } else {
           animationEnd(data);
-          //if
-          //localStorage.setItem("AccountData", JSON.stringify(data));
-          //window.location.href = "./main";
         }
       })
       .catch((error) => {
         console.error(error);
       });
   } else {
+    animationEnd(false);
   }
 };
 
 const animationEnd = (e) => {
-  const dataAccount = e;
+  let dataAccount = e;
   animationPage.addEventListener("animationend", () => {
     if (dataAccount) {
       window.location.href = "./main";
@@ -51,3 +48,7 @@ const animationEnd = (e) => {
 };
 
 checkAccounts();
+
+const clearData = () => {
+  localStorage.clear("AccountData");
+};
