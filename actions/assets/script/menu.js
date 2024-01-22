@@ -2,7 +2,7 @@ const exitBtn = document.querySelector(".exitBtn");
 
 const exitAccount = () => {
   localStorage.clear("AccountData");
-  window.location.href = "../index.html";
+  window.location.href = "../";
 };
 
 document.addEventListener("DOMContentLoaded", () => {
