@@ -455,4 +455,8 @@ html::-webkit-scrollbar-thumb {
   .activeTab {
     border-top: #12be73 1px solid;
   }
+
+  .main-content {
+    padding-block-end: 100px;
+  }
 }
