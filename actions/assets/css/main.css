@@ -39,6 +39,9 @@ body {
 .exitBtn {
   position: absolute;
   bottom: 30px;
+  margin-inline: auto;
+  left: 0;
+  right: 0;
 }
 
 .activeTab {
