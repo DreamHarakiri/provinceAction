@@ -431,9 +431,9 @@ html::-webkit-scrollbar-thumb {
 
   nav ul li,
   nav ul a {
-    max-height: 95px;
+    max-height: 75px;
     height: 100%;
-    min-height: 95px;
+    min-height: 75px;
 
     max-width: 49px;
     width: 100%;
