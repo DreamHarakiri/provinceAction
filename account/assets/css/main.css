@@ -1,0 +1,371 @@
+@import url("../fonts/fonts.css");
+
+body {
+  background-color: #12181f;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navigation {
+  height: 100vh;
+  max-width: 65px;
+  width: 100%;
+  background-color: #161d26;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+
+  font-size: 20px;
+
+  position: fixed;
+  align-items: center;
+}
+
+.logotip {
+  width: 34px;
+  height: 30px;
+  fill: #12be73;
+}
+
+.navigation ul {
+  margin-block-start: 60px;
+  text-align: center;
+}
+
+.navigation ul li {
+  margin-block-start: 50px;
+}
+
+.exitBtn {
+  position: absolute;
+  bottom: 30px;
+  margin-inline: auto;
+  left: 0;
+  right: 0;
+}
+
+.activeTab {
+  color: #12be73;
+}
+
+/* main */
+
+.main-content {
+  margin-inline-start: 65px;
+  padding: 20px 50px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.headerTitle h1 {
+  font-size: 24px;
+  margin-block-start: 20px;
+}
+
+.headerTitle p {
+  font-size: 14px;
+  color: rgb(182, 182, 182);
+}
+
+/* account state */
+.main__container {
+  margin-block-start: 87px;
+  display: flex;
+  gap: 50px;
+  width: 100%;
+}
+
+.accountAvatar {
+  width: 70px;
+  height: 70px;
+  min-height: 70px;
+  min-width: 70px;
+  border-radius: 25px;
+  background-image: url("https://www.smartworld.it/images/2022/01/25/recensione-gigabyte-eagle-8g-rtx-3050-nvidia-18-di-18--orig.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stateAccount {
+  max-width: 390px;
+}
+
+.stateAccount__container {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.accountInfo h1 {
+  color: #fff;
+
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.accountInfo p {
+  color: #b1b1b1;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.balanceState {
+  display: inline-flex;
+  padding: 7px 13px;
+  align-items: flex-start;
+  max-width: fit-content;
+  width: 100%;
+  gap: 10px;
+  border-radius: 12px;
+  background: #12533b;
+}
+
+.balanceState p {
+  color: #0caf60;
+
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.iconBlock__action {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: #12533b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBlock__action i {
+  font-size: 21px;
+  color: #0caf60;
+}
+
+.nameState__account h3 {
+  color: #fff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.nameState__account p {
+  color: #a4a8ab;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 114.286% */
+  max-width: 277px;
+}
+
+.container__plateList {
+  max-width: max-content;
+}
+
+.plateList {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.listMenu__account {
+  margin-block-start: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-inline-start: 23px;
+}
+
+.actionAccount {
+  max-width: 100%;
+  width: 100%;
+}
+
+.actionAccount h4 {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.actionAccount p {
+  color: #b6b6b6;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.tableAction {
+  max-width: 1270px;
+  width: 100%;
+  border-radius: 5px;
+  background: #161d26;
+  height: 122px;
+  margin-block-start: 24px;
+  margin-inline-end: 45px;
+}
+
+.defaultTab {
+  display: flex;
+  margin-inline: 29px 29px;
+  padding-block-start: 28px;
+
+  gap: 63px;
+  position: relative;
+
+  color: #fff;
+
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  border-bottom: 1px solid rgba(36, 45, 57, 0.6);
+}
+
+.name {
+  margin-inline-start: 70px;
+}
+
+.defaultTab li {
+  height: 45px;
+}
+
+.price {
+  position: absolute;
+  right: 160px;
+}
+
+.dynamic {
+  position: absolute;
+  right: 0;
+}
+
+.buyPrice {
+  position: absolute;
+  right: 335px;
+}
+
+.image__content {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.name__content {
+  color: white;
+  min-width: 120px;
+  margin-inline-start: 30px;
+}
+
+.company__content {
+  color: #818181;
+  margin-inline-start: 35px;
+}
+
+.dynamic__content {
+  padding: 10px;
+  background-color: #1f2f2f;
+  color: #2ecf95;
+  border-radius: 12px;
+  right: 70px;
+  position: absolute;
+}
+
+.buyPrice__content {
+  position: absolute;
+  right: 405px;
+  margin-inline-start: 365px;
+}
+
+.price__content {
+  position: absolute;
+  right: 255px;
+  margin-inline-start: 90px;
+}
+
+.list__content {
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+  height: 48px;
+  padding-inline: 29px 29px;
+  margin-block-start: 20;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+}
+
+.list__content:hover {
+  background-color: #24303e;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+@media (max-width: 1500px) {
+  .image__content {
+    display: none;
+  }
+
+  .name__content,
+  .name {
+    margin-inline-start: 0px;
+  }
+
+  .buyPrice__content {
+    max-width: max-content;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .company__content,
+  .company {
+    display: none;
+    max-width: max-content;
+  }
+
+  .defaultTab {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    justify-content: space-between;
+  }
+
+  .buyPrice,
+  .price,
+  .dynamic {
+    position: static;
+    min-width: 131px;
+  }
+
+  .name {
+    min-width: 120px;
+  }
+
+  .tableAction {
+    max-width: 100%;
+  }
+}

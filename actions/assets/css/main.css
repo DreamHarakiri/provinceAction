@@ -321,7 +321,7 @@ html::-webkit-scrollbar-thumb {
 
   .headerMain {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 30px;
   }
 
@@ -337,16 +337,24 @@ html::-webkit-scrollbar-thumb {
   }
 
   .searchAction {
-    max-width: 260px;
+    min-width: 260px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .menuController form {
+    min-width: 260px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .bellLink {
     margin: 0;
   }
 
-  .menuController {
+  .headerMain {
     max-width: 100%;
-    padding-inline: 10px;
+    padding-inline: 20px;
   }
 
   .name__content,
@@ -459,7 +467,7 @@ html::-webkit-scrollbar-thumb {
   }
 
   .activeTab {
-    border-top: #12be73 1px solid;
+    border-top: #12be73 2px solid;
   }
 
   .main-content {

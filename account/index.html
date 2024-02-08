@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/logotip.ico" type="image/svg+xml" />
+
+    <title>ProvinceActions</title>
+
+    <link rel="stylesheet" href="assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/fonts/fonts.css" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="navigation">
+        <nav>
+          <svg class="logotip" viewBox="0 0 28 24">
+            <use href="./assets/images/logotip.svg#logotip"></use>
+          </svg>
+          <ul class="menuList">
+            <li>
+              <a href="#"><i class="bi bi-house"></i></a>
+            </li>
+            <li class="">
+              <a href="#"><i class="bi bi-graph-up"></i></a>
+            </li>
+            <li class="activeTab">
+              <a href="#"><i class="bi bi-archive"></i></a>
+            </li>
+            <li class="">
+              <a href="#"><i class="bi bi-gear"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-chat-right-text"></i></a>
+            </li>
+            <a class="exitBtn" href="#"><i class="bi bi-box-arrow-left"></i></a>
+          </ul>
+        </nav>
+      </section>
+      <section class="main-content">
+        <div class="headerTitle">
+          <h1>Личный кабинет</h1>
+          <p>Здесь ты можешь управлять своим аккаунтом</p>
+        </div>
+
+        <div class="main__container">
+          <div class="stateAccount">
+            <div class="stateAccount__container">
+              <div class="accountAvatar"></div>
+              <div class="accountInfo">
+                <h2>DreamHarakiri</h2>
+                <p>UID: #12314422</p>
+              </div>
+              <div class="balanceState">
+                <p>10.000.000₽</p>
+              </div>
+            </div>
+
+            <ul class="listMenu__account">
+              <li>
+                <div class="container__plateList">
+                  <a href="#" class="plateList">
+                    <div class="iconBlock__action">
+                      <i class="bi bi-wallet2"></i>
+                    </div>
+                    <div class="nameState__account">
+                      <h3>Пополнить баланс</h3>
+                      <p>Здесь происходит пополнение баланса</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="container__plateList">
+                  <a href="#" class="plateList">
+                    <div class="iconBlock__action">
+                      <i class="bi bi-wallet2"></i>
+                    </div>
+                    <div class="nameState__account">
+                      <h3>Вывести баланс</h3>
+                      <p>Вывод свободного баланса в игру</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="container__plateList">
+                  <a href="#" class="plateList">
+                    <div class="iconBlock__action">
+                      <i class="bi bi-list-check"></i>
+                    </div>
+                    <div class="nameState__account">
+                      <h3>История сделок</h3>
+                      <p>Сделки за всю историю аккаунта находятся здесь</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="container__plateList">
+                  <a href="#" class="plateList">
+                    <div class="iconBlock__action">
+                      <i class="bi bi-list-ol"></i>
+                    </div>
+                    <div class="nameState__account">
+                      <h3>Правила пользования</h3>
+                      <p>
+                        Свод всех правил пользования площадкой Province Action
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="container__plateList">
+                  <a href="#" class="plateList">
+                    <div class="iconBlock__action">
+                      <i class="bi bi-sliders"></i>
+                    </div>
+                    <div class="nameState__account">
+                      <h3>Раздел настроек</h3>
+                      <p>Здесь ты можешь перейти в раздел настроек</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="actionAccount">
+            <h4>Ваши акции</h4>
+            <p>Все активные акции в одной таблице</p>
+
+            <div class="tableAction">
+              <ul class="defaultTab">
+                <li class="name">Название</li>
+                <li class="company">Компания</li>
+                <li class="buyPrice">Цена покупки</li>
+                <li class="price">Актуальная цена</li>
+                <li class="dynamic">Динамика цены</li>
+              </ul>
+
+              <ul class="list__content">
+                <li>
+                  <img
+                    class="image__content"
+                    src="https://sun9-22.userapi.com/impg/chlaW0zFuYQOVaYi1skWQ3Z1zD-BcoLkedAdzQ/_0iH9UGIzRI.jpg?size=1536x1536&quality=95&sign=4c8d1614e537a9fd4decfe9a85d246a1&type=album"
+                    alt=""
+                  />
+                </li>
+                <li class="name__content">Province Action</li>
+                <li class="company__content">Province Action</li>
+                <li class="buyPrice__content">100.000.000 ₽</li>
+                <li class="price__content">100.000.000 ₽</li>
+                <li class="dynamic__content">+12.21 %</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script type="module" src="./assets/js/main.js"></script>
+</html>
