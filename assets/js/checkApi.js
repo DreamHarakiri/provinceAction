@@ -54,7 +54,7 @@ const clearData = () => {
 
 // new code
 
-export const checkAccount = () => {
+const checkAccount = () => {
   if (localStorage.getItem("AccountData")) {
     let localDataJSON = localStorage.getItem("AccountData");
     let localData = JSON.parse(localDataJSON);
@@ -84,3 +84,5 @@ export const checkAccount = () => {
     window.location.href = "../login";
   }
 };
+
+export { checkAccount };

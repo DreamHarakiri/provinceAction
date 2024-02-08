@@ -26,6 +26,6 @@ function addAction(e) {
 
   return addAction;
 }
+checkAccount();
 
 renderAction();
-checkAccount();
