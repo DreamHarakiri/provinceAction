@@ -516,8 +516,8 @@ a {
 @media (max-width: 680px) {
   .defaultTab,
   .list__content {
-    gap: 8px;
-    font-size: 8px;
+    gap: 0px;
+    font-size: 10px;
   }
 
   .name,
@@ -525,7 +525,7 @@ a {
   .price,
   .dynamic {
     position: static;
-    max-width: 80px;
+    max-width: 96px;
     min-width: 0;
   }
   .name__content,
@@ -534,14 +534,14 @@ a {
   .dynamic__content {
     position: static;
     margin-inline-start: 0px;
-    max-width: 80px;
+    max-width: 96px;
     width: 100%;
     min-width: 0;
   }
 
   .defaultTab li {
     height: 35px;
-    max-width: 80px;
+    max-width: 96px;
     width: 100%;
   }
 
@@ -549,11 +549,12 @@ a {
     height: auto;
     min-width: 100%;
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px 5px;
   }
 
   .main-content {
-    padding: 20px 20px;
+    padding: 20px 0px;
+    width: 100%;
   }
 
   .defaultTab {
