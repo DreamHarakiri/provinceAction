@@ -511,6 +511,10 @@ a {
   .main-content {
     padding-block-end: 100px;
   }
+
+  .menuList {
+    margin-block-end: 20px;
+  }
 }
 
 @media (max-width: 680px) {
