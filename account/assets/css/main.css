@@ -580,6 +580,13 @@ a {
     height: 30px;
     margin-block-start: 20px;
   }
+
+  .headerTitle,
+  .listMenu__account,
+  .actionAccount h4,
+  .actionAccount p {
+    margin-inline-start: 20px;
+  }
 }
 
 @media (max-width: 430px) {
