@@ -217,13 +217,10 @@ a {
 }
 
 .tableAction {
-  max-width: 1270px;
-  width: 100%;
   border-radius: 5px;
   background: #161d26;
   height: 122px;
   margin-block-start: 24px;
-  margin-inline-end: 45px;
 }
 
 .defaultTab {
@@ -282,27 +279,30 @@ a {
 
 .company__content {
   color: #818181;
-  margin-inline-start: 35px;
+  margin-inline-start: 30px;
 }
 
 .dynamic__content {
-  padding: 10px;
-  background-color: #1f2f2f;
-  color: #2ecf95;
-  border-radius: 12px;
   right: 70px;
   position: absolute;
 }
 
+.dynamic__content-block {
+  padding: 10px;
+  background-color: #1f2f2f;
+  color: #2ecf95;
+  border-radius: 12px;
+  max-width: fit-content;
+}
+
 .buyPrice__content {
   position: absolute;
-  right: 405px;
-  margin-inline-start: 365px;
+  right: 385px;
 }
 
 .price__content {
   position: absolute;
-  right: 255px;
+  right: 235px;
   margin-inline-start: 90px;
 }
 
@@ -342,16 +342,27 @@ a {
 
 @media (max-width: 1400px) {
   .company__content,
-  .company {
+  .company,
+  .image__content {
     display: none;
     max-width: max-content;
   }
 
-  .defaultTab {
+  .defaultTab,
+  .list__content {
     display: flex;
     gap: 10px;
     font-size: 14px;
     justify-content: space-between;
+  }
+
+  .buyPrice__content,
+  .price__content,
+  .dynamic__content {
+    position: static;
+    margin-inline-start: 0px;
+    max-width: 131px;
+    width: 100%;
   }
 
   .buyPrice,
@@ -367,5 +378,205 @@ a {
 
   .tableAction {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .main__container {
+    display: block;
+  }
+
+  .main-content {
+    margin-inline-start: 0;
+  }
+
+  .stateAccount {
+    max-width: 100%;
+  }
+
+  .listMenu__account {
+    margin-inline-start: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .nameState__account p {
+    max-width: 230px;
+  }
+
+  .listMenu__account li {
+    padding: 0;
+    max-width: 280px;
+  }
+
+  .actionAccount {
+    margin-block-start: 50px;
+  }
+
+  /**/
+
+  .navigation {
+    height: max-content;
+    max-width: 100%;
+    width: 100%;
+    background-color: #161d26;
+    padding-block: 0;
+
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 20px;
+
+    z-index: 1;
+    bottom: 0;
+    position: fixed;
+    align-items: center;
+    align-content: center;
+  }
+
+  .navigation ul {
+    margin-block-start: 0;
+  }
+
+  .navigation ul li {
+    display: inline-block;
+    margin-block-start: 0;
+  }
+
+  .exitBtn {
+    position: static;
+  }
+
+  .logotip {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 12px;
+    max-width: 100%;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  nav ul li,
+  nav ul a {
+    max-height: 75px;
+    height: 100%;
+    min-height: 75px;
+
+    max-width: 49px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-inline: auto;
+    padding-inline: auto;
+  }
+
+  nav ul .bi {
+    font-size: 22px;
+  }
+
+  .menuList li a,
+  .menuList a i {
+    max-width: fit-content;
+  }
+
+  .exitBtn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .activeTab {
+    border-top: #12be73 2px solid;
+  }
+
+  .main-content {
+    padding-block-end: 100px;
+  }
+}
+
+@media (max-width: 680px) {
+  .defaultTab,
+  .list__content {
+    gap: 5px;
+    font-size: 8px;
+  }
+
+  .name,
+  .buyPrice,
+  .price,
+  .dynamic {
+    position: static;
+    max-width: 80px;
+    min-width: 0;
+  }
+  .name__content,
+  .buyPrice__content,
+  .price__content,
+  .dynamic__content {
+    position: static;
+    margin-inline-start: 0px;
+    max-width: 80px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .defaultTab li {
+    height: 35px;
+    max-width: 80px;
+    width: 100%;
+  }
+
+  .tableAction {
+    height: auto;
+    min-width: 100%;
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  .main-content {
+    padding: 20px 20px;
+  }
+
+  .defaultTab {
+    padding-top: 0px;
+  }
+
+  .defaultTab,
+  .list__content {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  .list__content {
+    height: 30px;
+    margin-block-start: 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .stateAccount__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .accountInfo {
+    text-align: center;
   }
 }
