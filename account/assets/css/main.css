@@ -509,7 +509,7 @@ a {
   }
 
   .main-content {
-    padding-block-end: 150px;
+    margin-block-end: 50px;
   }
 
   .menuList {
