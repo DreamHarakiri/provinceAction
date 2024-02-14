@@ -471,7 +471,7 @@ html::-webkit-scrollbar-thumb {
   }
 
   .main-content {
-    margin-block-end: 50px;
+    padding-block-end: 100px;
   }
 
   .menuList {
